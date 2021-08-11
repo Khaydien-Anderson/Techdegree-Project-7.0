@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dashboard</title>
+</head>
+<body>
+    <header> <!-- Header-->
+        <h1></h1>
+            <div>
+
+            </div>
+        <img>
+        <h3></h3>
+    </header>
+    <nav> <!-- sidebar/Navigation-->
+        <a></a>
+            <img>
+    </nav>
+    
+    <main> <!--widgets-->
+
+    <div class="main-header">
+        <h2>Dashboard</h2>    
+            <div class="main-header-search">
+                <input type="search" placeholder="Search...">
+            </div>
+    </div>
+        <div class="alert" id="alert"> </div> <!-- Alerts-->
+
+<section class="traffic"> <!--TRAFFIC CHART-->
+        <div class="traffic-header">
+            <h3>Traffic</h3>
+                <ul class="traffic-nav">
+                    <li class="traffic-nav-link">Hourly</li>
+                    <li class="traffic-nav-link">Daily</li>
+                    <li class="traffic-nav-link">Weekly</li>
+                    <li class="traffic-nav-link">Monthly</li>
+                </ul>
+            <div class="widget-container-full">
+                <canvas id="traffic-chart"></canvas>
+            </div>
+        </div>
+</section>
+
+<section class="daily"> <!--DAILY TRAFFIC BAR CHART-->
+    <h3>Daily Traffic</h3>
+        <div class="widget-container-half">
+            <canvas id="daily-chart"></canvas>
+        </div>
+</section>
+
+<section class="daily"> <!-- DONUT TRAFFIC CHART-->
+    <h3>Mobile Users</h3>
+        <div class="widget-container-half">
+            <canvas id="donut-chart"></canvas>
+        </div>
+</section>
+<div class="social-container">
+        <div class="social-image">
+            <!--twitter-->
+        </div>
+        <div class="social-text">
+            <p>Twitter</p>
+            <p>10,345</p>
+
+        </div>
+</div>
+<div class="social-container">
+    <div class="social-image">
+        <!--Instagram-->
+    </div>
+    <div class="social-text">
+        <p>Instagram</p>
+        <p>16,445</p>
+
+    </div>
+</div>
+<div class="social-container">
+    <div class="social-image">
+        <!--Facebook-->
+    </div>
+    <div class="social-text">
+        <p>Facebook</p>
+        <p>13,514</p>
+
+    </div>
+</div>
+<!--New members section-->
+<section class="members">
+    <h3>New Members</h3> 
+
+        <div class="members-container">
+            <img src="images/member-1.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Victoria Chambers</p>
+                    <a href="#">victoria.chambers80@example.com</a>
+                    <p>10/15/20</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-2.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dale Byrd</p>
+                    <a href="#">dale.byrd52@example.com</a>
+                    <p>10/15/20</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-3.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dawn Wood</p>
+                    <a href="#">dawn.wood16@example.com</a>
+                    <p>10/15/20</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-4.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dan Oliver</p>
+                    <a href="#">dan.oliver82@example.com</a>
+                    <p>10/15/20</p>
+                </div>
+        </div>
+</section>
+<!-- New Members Activity-->
+<section class="members-activity">
+        <div class="activity-container">
+            <img src="images/member-1.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Victoria Chambers</p>
+                    
+                    <p>4 hours ago</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-2.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dale Byrd</p>
+                   
+                    <p>4 hours ago</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-3.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dawn Wood</p>
+                   
+                    <p>5 hours ago</p>
+                </div>
+        </div>
+        <div class="members-container">
+            <img src="images/member-4.jpg" alt="Photo of Victoria Chambers." class="profile-image">
+                <div class="members-text">
+                    <p>Dan Oliver</p>
+                  
+                    <p>5 hours ago</p>
+                </div>
+        </div>
+
+</section>
+<!--Messaging-->
+<section class="messaging"> 
+    <h3>Message User</h3>
+        <form class="search-user">
+            <input type="search" placeholder="Search for User" class="form-field" id="userField">
+            <input type="text" placeholder="Message for User" class="form-area" id="messageField">
+            <button class="button-primary" id="send" type="submit">SEND</button>
+        </form>
+        <div>
+
+        </div>
+</section>
+<!--Settings-->
+<section class="settings">
+    <h3>Settings</h3>
+
+
+    <select class="form-field" id="timezone">
+        <option disable selected>Select A Timezone</option>
+        <option>Eastern</option>
+        <option>Western</option>
+        <option>GMT</option>
+        <option>UTC</option>
+    </select>
+    <select>
+        <div class="seetings-button">
+            <button class="button-primary" id="save">Save</button>
+            <button class="button-secondary" id="cancel">Cancel</button>
+        </div>
+    </select>
+</section>
+    </main>
+</body>
+</html>
