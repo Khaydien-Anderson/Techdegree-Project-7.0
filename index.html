@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/toggle-switch.css">
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
     <title>Web Dashboard</title>
@@ -44,7 +46,7 @@
                     <li class="traffic-nav-link">Monthly</li>
                 </ul>
             <div class="widget-container-full">
-                <img src="images/barchart .png">
+                <img>
                 <canvas id="traffic-chart"></canvas>
             </div>
         </div>
@@ -53,7 +55,7 @@
 <section class="daily"> <!--DAILY TRAFFIC BAR CHART-->
     <h3>Daily Traffic</h3>
         <div class="widget-container-half">
-            <img src="images/barchart .png">
+            <img>
             <canvas id="daily-chart"></canvas>
         </div>
 </section>
@@ -61,10 +63,10 @@
 <section class="mobile"> <!-- DONUT TRAFFIC CHART-->
     <h3>Mobile Users</h3>
         <div class="widget-container-half">
-            <img src="images/barchart .png">
+            <img>
             <canvas id="donut-chart"></canvas>
         </div>
-</section>
+</section class = "social">
 <div class="social-container">
         <div class="social-image">
             <!--twitter-->
@@ -184,7 +186,38 @@
 <!--Settings-->
 <section class="settings">
     <h3>Settings</h3>
+    
+    <label class="switch-light switch-ios" onclick="">
+        <input type="checkbox">
+      
+        <strong>
+          Send Email Notifications
+        </strong>
+      
+        <span aria-hidden="true">
+            
+          <span>Off</span>
+          <span>On</span>
+          <a></a>
+        </span>
+      </label>
 
+      <label class="switch-light switch-ios" onclick="">
+        <input type="checkbox">
+      
+        <strong>
+      Set Profile Public
+        </strong>
+      
+        <span aria-hidden="true">
+            
+          <span>Off</span>
+          <span>On</span>
+          <a></a>
+        </span>
+      </label>
+        
+      
 
     <select class="form-field" id="timezone">
         <option disable selected>Select A Timezone</option>
@@ -201,6 +234,7 @@
     </select>
 </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
