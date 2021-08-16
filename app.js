@@ -137,4 +137,4 @@ send.addEventListener('click', () => {
         alert('Your message was sent.')
     }
 
-})
+});
