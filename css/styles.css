@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  font-size: 15px;
 }
 
 /*GRID */
@@ -24,8 +25,9 @@ nav {
 }
 
 main {
+  width: 95%;
+  margin: 0 auto;
   grid-area: main;
-  display: grid;
 }
 
 .widget-container-full, .widget-container-half {
@@ -33,7 +35,6 @@ main {
 }
 
 header {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: #6060b7;
@@ -44,11 +45,12 @@ header h1 {
   font-size: 20px;
   color: white;
 }
-header .bell #bell {
-  width: 25px;
-  padding-top: 8px;
-  position: fixed;
-  right: 145px;
+header .bell .icon {
+  width: 20px;
+  padding-top: 10px;
+  position: absolute;
+  right: 150px;
+  fill: white;
 }
 header hr {
   height: 70%;
@@ -81,9 +83,173 @@ nav ul {
   flex-direction: row;
   justify-content: space-evenly;
   list-style-type: none;
+  margin-top: 4px;
 }
-nav ul li img {
-  width: 25px;
+nav ul li .icon {
+  width: 20px;
+  fill: white;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+.main-header {
+  display: flex;
+  padding: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-header h2 {
+  font-weight: 300;
+  margin-top: 5px;
+}
+.main-header .main-header-search {
+  padding: 5px;
+  display: none;
+}
+
+.alert {
+  padding-top: 5px;
+}
+.alert p {
+  font-weight: lighter;
+  font-size: 12px;
+  position: relative;
+  top: 8px;
+  left: 20px;
+  white-space: nowrap;
+  float: left;
+  color: white;
+}
+
+.alert-banner {
+  height: 35px;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: #6060b7;
+  width: 100%;
+  white-space: nowrap;
+}
+.alert-banner .alert-banner-close {
+  position: relative;
+  top: 10px;
+  left: -13px;
+  float: right;
+}
+.alert-banner .breaks {
+  width: 40%;
+}
+
+.traffic {
+  padding-top: 10px;
+}
+.traffic .traffic-header h3 {
+  font-size: 16px;
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+.traffic .traffic-header ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+.traffic .traffic-header ul li {
+  color: white;
+  margin: auto;
+  border: 10px solid transparent;
+  background-color: #59c476;
+  border-radius: 40%;
+}
+
+.social {
+  border-bottom: 1px grey solid;
+}
+.social .social-container {
+  border: 1px solid grey;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  width: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.social .social-container .social-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #6060b7;
+}
+.social .social-container .social-image svg {
+  display: block;
+  margin: auto;
+  width: 40px;
+  fill: white;
+  padding-top: 20px;
+}
+.social .social-container .social-text {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.social .social-container p:nth-child(1) {
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: #6060b7;
+}
+.social .social-container p:nth-child(2) {
+  font-weight: lighter;
+  font-size: 34px;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+}
+.members .members-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 10px 0;
+  border-bottom: 1px solid gray;
+}
+.members .members-container img {
+  margin: auto;
+  width: 80px;
+  border-radius: 50%;
+}
+.members .members-container .members-text {
+  text-align: center;
+}
+.members .members-container .members-text a {
+  text-decoration: none;
+  color: #6060b7;
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+.activity .activity-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+}
+.activity .activity-container img {
+  margin: auto;
+  width: 80px;
+  border-radius: 50%;
+}
+.activity .activity-container .activity-text {
+  text-align: center;
 }
 
 /* MEDIA QUERIES */
@@ -111,6 +277,10 @@ nav ul li img {
 
   .widget-container-half {
     width: 45vw;
+  }
+
+  nav ul {
+    flex-direction: column;
   }
 }
 @media (min-width: 1024px) {
