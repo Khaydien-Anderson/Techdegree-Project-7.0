@@ -84,7 +84,8 @@ header {
 }
 nav {
     background-color: $nav-color;
-    padding: 0 50px;
+    padding: 0;
+    
     
     ul {
         display: flex;
@@ -166,12 +167,17 @@ padding-top: 5px;
             display: flex;
             flex-direction: row;
             list-style-type: none;
+            justify-content: space-evenly;
             li {
+                width: 10%;
+                height: 15px;
+                text-align: center;
                 color: white;
-                margin: auto;
+                margin: auto 0;
                 border: 10px solid transparent;
                 background-color: $button-color;
-                border-radius: 40%;
+                border-radius: 12px;
+                
             }
         }
     }
@@ -369,14 +375,13 @@ border-bottom: 1px solid grey;
     .traffic, .social {
         grid-column: 1 / span 2;
     }
-    .messaging, .activity, .members, .settings {
-        grid-column: 1 / span 2;
+    .daily, .members, .messaging {
+        grid-column: 1 / span 1;
     }
 
-    nav {
-        padding: 0;
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
     }
-  
 
     .widget-container-full {
         width: 90vw;
@@ -384,13 +389,42 @@ border-bottom: 1px solid grey;
     .widget-container-half {
         width: 45vw;
     }
+//STYLES
 
     nav ul {
         flex-direction: column;
-        
-      }
-    }
+        li {
+            padding: 10px;
+            margin: 0 auto;
+        }
+      };
 
+      .traffic {
+          .traffic-header {
+              width: 30%;
+              display: inline;
+              h3 {
+                  top: 10px;
+              }
+          ul {
+              position: relative;
+              float: right;
+              bottom: 30px;
+              li {
+                  width: 20%;
+                  margin: 0 5px;
+                
+                
+              }
+          }
+      }
+    };
+
+
+
+    
+
+}
 
 
 @media (min-width: 1024px) {

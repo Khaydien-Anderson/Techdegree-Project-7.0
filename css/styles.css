@@ -76,7 +76,7 @@ header .login h3 {
 
 nav {
   background-color: #3c3a62;
-  padding: 0 50px;
+  padding: 0;
 }
 nav ul {
   display: flex;
@@ -157,13 +157,17 @@ h3 {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  justify-content: space-evenly;
 }
 .traffic .traffic-header ul li {
+  width: 10%;
+  height: 15px;
+  text-align: center;
   color: white;
-  margin: auto;
+  margin: auto 0;
   border: 10px solid transparent;
   background-color: #59c476;
-  border-radius: 40%;
+  border-radius: 12px;
 }
 
 .social {
@@ -343,12 +347,12 @@ h3 {
     grid-column: 1/span 2;
   }
 
-  .messaging, .activity, .members, .settings {
-    grid-column: 1/span 2;
+  .daily, .members, .messaging {
+    grid-column: 1/span 1;
   }
 
-  nav {
-    padding: 0;
+  .mobile, .activity, .settings {
+    grid-column: 2/span 1;
   }
 
   .widget-container-full {
@@ -361,6 +365,27 @@ h3 {
 
   nav ul {
     flex-direction: column;
+  }
+  nav ul li {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  .traffic .traffic-header {
+    width: 30%;
+    display: inline;
+  }
+  .traffic .traffic-header h3 {
+    top: 10px;
+  }
+  .traffic .traffic-header ul {
+    position: relative;
+    float: right;
+    bottom: 30px;
+  }
+  .traffic .traffic-header ul li {
+    width: 20%;
+    margin: 0 5px;
   }
 }
 @media (min-width: 1024px) {
