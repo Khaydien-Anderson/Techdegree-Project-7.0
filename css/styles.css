@@ -341,9 +341,11 @@ h3 {
 
   main {
     grid-template-columns: 50%;
+    display: grid;
+    grid-template-areas: ".traffic .traffic" ".daily .mobile" ".social .social" ".members .members" ".activity .acitiy";
   }
 
-  .traffic, .social {
+  .traffic, .social, hr {
     grid-column: 1/span 2;
   }
 
