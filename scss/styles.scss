@@ -372,12 +372,10 @@ border-bottom: 1px solid grey;
     main {
         grid-template-columns: 50%;
         display: grid;
-        grid-template-areas: '.traffic .traffic'
-                            '.daily .mobile'
-                            '.social .social'
-                            '.members .members'
-                            '.activity .acitiy';
+        
     }
+
+ 
     .traffic, .social, hr {
         grid-column: 1 / span 2;
     }
@@ -425,11 +423,29 @@ border-bottom: 1px solid grey;
           }
       }
     };
+.social {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+.social-header {
+    width: 100%;
+}
+.all-social-containers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .social-container {
+        width: 30%;
+    }
+}
+
+}
+
 .members {
     
 }
-
-
     
 
 }
