@@ -297,9 +297,8 @@ if (e.target.value) {
     namesArray = names.filter(name => name.toLowerCase().includes(e.target.value));
     namesArray = namesArray.map (name => `<li>${name}</li`)
     
+    showNamesArray(namesArray); // <<<<< not working 
 }
-
-
 
 });
 
