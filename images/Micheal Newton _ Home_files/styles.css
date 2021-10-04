@@ -1,0 +1,305 @@
+:root {
+  --white: #afafaf;
+  --red: #e31b23;
+  --bodyColor: #292a2b;
+  --borderFormEls: hsl(0, 0%, 10%);
+  --bgFormEls: hsl(0, 0%, 14%);
+  --bgFormElsFocus: hsl(0, 7%, 20%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, serif;
+  outline: none;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-color: #1C1C1C;
+}
+
+header {
+  height: 60px;
+  background-image: linear-gradient(#111111, #1C1C1C);
+}
+header h1 {
+  font-family: "Baloo Thambi 2", cursive;
+  padding: 20px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a.icon {
+  font-size: 30px;
+}
+.navbar #navlist {
+  display: none;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.navbar #navlist li:hover {
+  opacity: 0.7;
+}
+.navbar #navlist li {
+  cursor: pointer;
+  padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #BB000E;
+  border-radius: 10px;
+  margin-top: 15px;
+  color: whitesmoke;
+}
+.navbar #navlist li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+h1, h2, p {
+  color: whitesmoke;
+}
+
+main {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+main .biopic {
+  width: 60%;
+}
+main .biopic img {
+  z-index: 1;
+}
+main figure {
+  padding-bottom: 10px;
+}
+main figure figcaption {
+  color: whitesmoke;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+footer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+footer .footer-contact p {
+  margin: 0 auto;
+  line-height: 1.2;
+}
+footer .footer-contact :hover {
+  opacity: 0.7;
+}
+footer .socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* Style all font awesome icons */
+  /* Add a hover effect */
+  /* Set a specific color for each brand */
+  /* Facebook */
+}
+footer .socials .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+footer .socials .fa:hover {
+  opacity: 0.7;
+}
+footer .socials .fa-facebook, footer .socials .fa-twitter, footer .socials .fa-instagram, footer .socials .fa-linkedin {
+  background: #161616;
+  color: #BB000E;
+}
+footer a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.about {
+  text-align: center;
+}
+.about h2 {
+  padding-top: 20px;
+}
+.about p {
+  font-weight: lighter;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+form a {
+  color: inherit;
+}
+form input,
+form select,
+form textarea,
+form button {
+  font-family: inherit;
+  font-size: 100%;
+}
+form button,
+form label {
+  cursor: pointer;
+}
+form select {
+  appearance: none;
+}
+form select::-ms-expand {
+  display: none;
+}
+form select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--white);
+}
+form textarea {
+  resize: none;
+}
+form ul {
+  list-style: none;
+}
+
+/*FORM STYLING*/
+.my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+  width: 100%;
+  line-height: 1.5;
+  padding: 15px 10px;
+  border: 1px solid var(--borderFormEls);
+  color: var(--white);
+  background: var(--bgFormEls);
+  transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25), transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.my-form textarea {
+  height: 170px;
+}
+
+.my-form ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus,
+.my-form button:focus {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form select:focus,
+.my-form input:focus,
+.my-form textarea:focus {
+  transform: scale(1.02);
+}
+
+.my-form *:required,
+.my-form select {
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 15px 15px;
+}
+
+.my-form *:required {
+  background-image: url(asterisk.svg);
+}
+
+.my-form select {
+  background-image: url(down.svg);
+}
+
+.my-form .btn-grid {
+  position: relative;
+  overflow: hidden;
+  transition: filter 0.2s;
+}
+
+.my-form button:enabled:hover,
+.my-form button:focus {
+  background: var(--bgFormElsFocus);
+}
+
+.my-form button > * {
+  display: inline-block;
+  width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.my-form button .back {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-110%, -50%);
+}
+
+.my-form button:enabled:hover .back,
+.my-form button:focus .back {
+  transform: translate(-50%, -50%);
+}
+
+.my-form button:enabled:hover .front,
+.my-form button:focus .front {
+  transform: translateX(110%);
+}
+
+@media (min-width: 320px) {
+  .my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .my-form .grid {
+    display: grid;
+    grid-gap: 1.5rem;
+  }
+
+  .my-form .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .my-form .grid-3 {
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+
+  .my-form select,
+.my-form input,
+.my-form textarea,
+.my-form button {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

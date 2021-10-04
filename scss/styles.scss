@@ -30,7 +30,8 @@ nav {
 }
 
 main {
-    width: 95%;
+    width: 99%;
+    
     margin: 0 auto;
     grid-area: main;
     
@@ -53,13 +54,64 @@ header {
     font-size: 20px;
     color: white;
     }
-    .bell .icon {
+    .bell {
         width: 20px;
         padding-top: 10px;
         position: absolute;
         right: 150px;
         fill: white;
+        cursor: pointer;
+        #notif {
+animation: notif 1s ease-in-out infinite;
+
+        }
     }
+
+    
+@keyframes notif {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+    .bell > .icon:hover {
+        animation: bell .5s ease infinite;
+    }
+        @keyframes bell {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            10% {
+                transform: rotateZ(25deg);
+            }
+            25% {
+                transform: rotateZ(45deg);
+            }
+            50% {
+                transform: rotateZ(0deg);
+            }
+            60% {
+                transform: rotateZ(-25deg);
+            }
+            75% {
+                transform: rotateZ(-45deg);
+            }
+            100% {
+                transform: rotateZ(0deg);
+            }
+        }
+    
     hr {
         height: 70%;
         margin: auto 0;
@@ -100,6 +152,8 @@ nav {
   }
 }
 
+
+
 //ALL H2 
 h2 {
     font-size: 18px;
@@ -110,7 +164,7 @@ h3 {
 .main-header {
 
 display: flex;
-padding: 5px;
+
 flex-direction: row;
 justify-content: space-between;
 h2 {
@@ -123,7 +177,10 @@ h2 {
 }
 }
 .alert {
-padding-top: 5px;
+padding-top: 10px;
+width: 100%;
+
+margin: 0 auto;
     p {
         font-weight: lighter;
         font-size: 12px;
@@ -142,6 +199,7 @@ padding-top: 5px;
    background-color: $theme-color;
     width: 100%;
     white-space: nowrap;
+    
   
 .alert-banner-close {
     position: relative;
@@ -154,9 +212,16 @@ padding-top: 5px;
 .breaks {
     width: 40%;
 }
+
 }
 .traffic {
     padding-top: 10px;
+    border-bottom: solid 1px grey;
+
+    .traffic-button {
+        text-decoration: none;
+        color: white;
+    }
     .traffic-header {
         h3 {
         font-size: 16px;
@@ -169,21 +234,27 @@ padding-top: 5px;
             list-style-type: none;
             justify-content: space-evenly;
             li {
-                width: 10%;
+                width: 14%;
                 height: 15px;
                 text-align: center;
                 color: white;
                 margin: auto 0;
                 border: 10px solid transparent;
                 background-color: $button-color;
-                border-radius: 12px;
+                border-radius: 11px;
                 
             }
         }
     }
 };
+.daily {
+    padding: 10px;
+    border-bottom: solid 1px grey;
+}
 .social {
+    padding: 10px;
     border-bottom: 1px grey solid;
+    border-top: 1px grey solid;
     .social-container {
         border: 1px solid grey;
         border-radius: 10px;
@@ -225,11 +296,14 @@ padding-top: 5px;
        }
     } 
 };
+.mobile {
+    padding: 10px;
+}
 
 .members {
 display: flex;
 flex-direction: column;
-
+padding-top: 10px;
 
 .members-container {
     display: flex;
@@ -257,7 +331,7 @@ flex-direction: column;
 .activity {
     display: flex;
 flex-direction: column;
-padding: 12px 0;
+padding-top: 10px;
 .activity-container {
     width: 100%;
     display: flex;
@@ -271,11 +345,16 @@ padding: 12px 0;
     }
     .activity-text {
         text-align: center;
+        .arrow {
+            display: block;
+        }
     }
+
 }
 }
 .messaging {
-   
+    
+   padding-top: 10px;
         -moz-box-sizing:border-box;
         -webkit-box-sizing:border-box;
         box-sizing:border-box;
@@ -283,7 +362,7 @@ padding: 12px 0;
 .search-user {
     display: flex;
     flex-direction: column;
-    
+    padding-top: 10px;
         #userField {
             border: 1px solid lightgray;
             background-color: $greyout;
@@ -296,8 +375,9 @@ padding: 12px 0;
             background-color: $greyout;
         }
         button {
-            padding: 10px 0;
-            margin-bottom: 5px;
+            height: 50px;
+            padding: 14px 0;
+            
             font-weight: lighter;
             color: white;
             background-color: $theme-color;
@@ -313,7 +393,7 @@ align-content: space-between;
 -moz-box-sizing:border-box;
 -webkit-box-sizing:border-box;
 box-sizing:border-box;
-border-bottom: 1px solid grey;
+border-top: 1px solid grey;
         
         
     h3 {
@@ -368,24 +448,26 @@ border-bottom: 1px solid grey;
         grid-template-columns: 55px 1fr;
         grid-template-areas: 'header header'
                              'nav main';
-    }
+    };
     main {
         grid-template-columns: 50%;
         display: grid;
-        
-    }
+    };
 
  
-    .traffic, .social, hr {
+    .traffic, .social, hr, .members, .activity, .messaging, .settings {
         grid-column: 1 / span 2;
     }
-    .daily, .members, .messaging {
+    .daily  {
         grid-column: 1 / span 1;
     }
 
-    .mobile, .activity, .settings {
+    .mobile {
         grid-column: 2 / span 1;
+        border-bottom: solid 1px grey;
     }
+
+    
 
     .widget-container-full {
         width: 90vw;
@@ -403,6 +485,12 @@ border-bottom: 1px solid grey;
         }
       };
 
+      .alert-banner {
+        margin-top: 30px;
+        margin-left: -46vw;
+        width: 199%;
+
+      }
       .traffic {
           .traffic-header {
               width: 30%;
@@ -423,6 +511,10 @@ border-bottom: 1px solid grey;
           }
       }
     };
+    .daily {
+        border-right: solid 1px grey;
+        border-bottom: solid 1px grey;
+    }
 .social {
 display: flex;
 flex-direction: row;
@@ -443,10 +535,37 @@ flex-wrap: wrap;
 
 }
 
-.members {
-    
+.arrow {
+    display: block;
+    float: right;
+    position: relative;
+    bottom: 25px;
+    font-size: 20px;
+    color: $nav-color;
 }
-    
+
+.members, .activity {
+    display: flex;
+    .members-container, .activity-container {
+        padding: 20px 0;
+        img {
+            margin: 0;
+        }
+        
+        .members-text, .activity-text {
+            margin-top: -70px;
+            margin-left: 90px;
+            padding: 10px;
+            text-align: left;
+        .date {
+            float: right;
+           margin-top: -10px;
+        }
+        
+       
+    }
+    }
+}
 
 }
 
@@ -461,4 +580,37 @@ flex-wrap: wrap;
     .mobile, .activity, .settings {
         grid-column: 2 / span 1;
     }
+
+    
+
+    .mobile {
+        border-bottom: solid 1px grey;
+    }
+    
+    .members {
+        
+        justify-content: space-between;
+    }
+    
+.activity {
+    border-left: solid 1px grey;
+    padding-top: 10px;
+    h3 {
+        padding-left: 10px;
+    }
+    .activity-container {
+       padding-left: 10px;
+    }
+}
+.messaging {
+    width: 98%;
+    padding: 10px;
+    
+}
+.settings {
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: solid 1px grey;
+}
 };

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://127.0.0.1:5500/contact.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Micheal Newton _ Home_files/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./Micheal Newton _ Home_files/css2" rel="stylesheet">
+<link rel="stylesheet" href="./Micheal Newton _ Home_files/font-awesome.min.css">
+<link href="./Micheal Newton _ Home_files/css2(1)" rel="stylesheet">
+<link rel="stylesheet" href="./Micheal Newton _ Home_files/font-awesome.min.css">
+    <title>Micheal Newton | Home</title>
+</head>
+<body>
+    <header>
+        <h1>Micheal Newton</h1>
+    </header>
+    <div class="navbar">
+        <nav>
+            <ul id="navlist">
+                <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li id="videos"><a href="http://127.0.0.1:5500/contact.html?#">Video Projects</a></li>
+                 <li id="socialmedia"><a href="http://127.0.0.1:5500/socials.html">Social Media</a></li>   
+                <li><a href="http://127.0.0.1:5500/contact.html">Contact</a></li>
+                    
+            </ul>
+        
+       
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="http://127.0.0.1:5500/contact.html?#" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </nav></div>
+      
+            <!-- <div id="sub-menu">
+               
+                   <a href="#">Producer</a>
+                   <a href="#">Production Manager</a>
+            
+                </div> -->
+        
+    
+    <main>
+        <figure>
+            <img class="biopic" src="http://127.0.0.1:5500/contact.html?">
+            <figcaption>“Born across the seas and came overseas to the promise land to have a better future.” - XV</figcaption>
+          </figure><hr>
+        <div class="about">
+      <h2>Contact</h2><br>
+
+      <form class="my-form">
+        <div class="container">
+          <h1>Get in touch!</h1>
+          <ul>
+                    <li><select>
+        <option selected="" disabled="">-- Please choose an option --</option>
+        <option>Booking Quotation</option>
+        <option>Collaboration</option>
+        <option>Other</option>      
+        </select></li>    
+
+            <li><div class="grid grid-2">
+  <input type="text" placeholder="Name" required="">  
+  <input type="text" placeholder="Surname" required="">
+</div><div class="grid grid-2">
+    <input type="email" placeholder="Email" required="">  
+    <input type="tel" placeholder="Phone">
+  </div></li>    
+            <li><textarea placeholder="Message"></textarea></li>    
+             
+            <li><div class="grid grid-3">
+                <div class="required-msg">REQUIRED FIELDS</div>
+                <button class="btn-grid" type="submit">
+                  <span class="back">
+                    <img src="./Micheal Newton _ Home_files/IMG_SRC" alt="">
+                  </span>
+                  <span class="front">SUBMIT</span>
+                </button>
+                <button class="btn-grid" type="reset">
+                  <span class="back">
+                    <img src="./Micheal Newton _ Home_files/IMG_SRC" alt="">
+                  </span>
+                  <span class="front">RESET</span>
+                </button> 
+              </div></li>
+            
+          </ul>
+        </div>
+      </form>
+      
+    </div><hr>
+    </main>
+    <footer>
+        <div class="socials">
+        <a href="http://127.0.0.1:5500/contact.html?#" class="fa fa-facebook"></a>
+        <a href="http://127.0.0.1:5500/contact.html?#" class="fa fa-instagram"></a>
+        <a href="http://127.0.0.1:5500/contact.html?#" class="fa fa-linkedin"></a>
+       
+    </div>
+        <span>
+        
+        <div class="footer-contact"><p><a href="mailto:micheal.newton1954@gmail.com">✉ micheal.newton1954@gmail.com</a></p>
+        <p><a href="tel:07802780251">☎ 07802780251</a></p></div>
+    </span></footer>
+    <script src="./Micheal Newton _ Home_files/app.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
