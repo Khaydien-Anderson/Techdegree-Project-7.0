@@ -290,29 +290,101 @@ const names = ['Dan Oliver', 'Dawn Wood', 'Dale Byrd', 'Victoria Chambers'];
 
 
 //searches through names^ and filters
-user.addEventListener('input', (e) => {
-let namesArray = [];
+// user.addEventListener('input', (e) => {
+// let namesArray = [];
 
-if (e.target.value) {
-    namesArray = names.filter(name => name.toLowerCase().includes(e.target.value));
-    namesArray = namesArray.map (name => `<li>${name}</li`)
+// if (e.target.value) {
+//     namesArray = names.filter(name => name.toLowerCase().includes(e.target.value));
+//     namesArray = namesArray.map (name => `<li><a style="text-decoration: none;"href="#">${name}</a></li>`)
     
-    showNamesArray(namesArray); // <<<<< not working 
-}
+//     showNamesArray(namesArray); 
+    
+// } 
 
-});
+// });
 
 
 
-function showNamesArray(namesArray) {
+// function showNamesArray(namesArray) {
 
-    const html = !namesArray.length ? '' : namesArray.join('')
-    document.getElementById('#userSearch').innerHTML = html;
-};
- 
+//     const html = !namesArray.length ? '' : namesArray.join('')
+//     document.getElementById('userSearch').innerHTML = html;
+   
+// };
+
 
 
 // Settings fields
 
 const save = document.getElementById('save');
 const cancel = document.getElementById('cancel');
+const switches = document.getElementById('switches1')
+const switches2 = document.getElementById('switches2')
+const timezone = document.getElementById('timezone')
+
+
+
+save.addEventListener('click', () => {
+    
+    if (switches.checked == true) {
+        localStorage.setItem('switches1', 'on')
+       
+        } else {
+            localStorage.setItem('switches1', 'off')
+        }
+        //SWITCH ONE ^^
+   if (switches2.checked == true) {
+        localStorage.setItem('switches2', 'on') 
+        } else {
+            localStorage.setItem('switches2', 'off')
+        }
+        //SWITCH TWO ^^ 
+    
+
+    localStorage.setItem('timezone', timezone.value)
+})
+// SAVE BUTTON FUNCTIONS ^^^
+
+
+cancel.addEventListener('click', () => {
+
+    switches.checked = false
+    switches2.checked = false
+    timezone.value = 'Select A Timezone'
+    localStorage.removeItem('switches1')
+    localStorage.removeItem('switches2')
+    localStorage.removeItem('timezone')
+
+})
+
+
+function getRecentSettings() {
+
+if (localStorage.getItem('switches1') == 'on') {
+    
+    switches.checked = true;
+}
+//SWITCHES ONE ON REFRESH ^^
+if (localStorage.getItem('switches2') == 'on') {
+    
+    switches2.checked = true;
+}
+  //SWTICHES TWO ON REFRESH ^^
+
+  const timeValue = localStorage.getItem('timezone')
+
+if (timeValue == 'GMT' || 
+    timeValue == 'Western' ||
+    timeValue == 'Eastern' ||
+    timeValue == 'UTC' ) {
+   
+    timezone.value = timeValue
+
+}
+// GOES THROUGH TIMEZONE OPTIONS AND SELECTS TARGETED ONE
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    getRecentSettings()
+})

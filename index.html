@@ -227,8 +227,14 @@
 <section class="messaging"> 
     <h3>Message User</h3>
         <form autocomplete="off" class="search-user">
-            <input  type="search" placeholder="Search for User" class="form-field" id="userField">
-            <ul id="userSearch"></ul>
+            <input  type="search" placeholder="Search for User" class="form-field" id="userField" list="userList">
+            <datalist id="userList">
+                <option>Victoria Chambers</option>
+                <option>Dale Byrd</option>
+                <option>Dawn Wood</option>
+                <option>Dan Oliver</option>
+            </datalist>
+            <!-- <ul id="userSearch"></ul> -->
             <textarea type="text" placeholder="Message for User" class="form-area" id="messageField"></textarea>
             <button class="button-primary" id="send" type="submit">SEND</button>
         </form>
@@ -241,7 +247,7 @@
     <h3>Settings</h3>
     
     <label class="switch-light switch-ios" onclick="">
-        <input type="checkbox">
+        <input id="switches1"  type="checkbox">
       
         <strong>
           Send Email Notifications
@@ -256,7 +262,7 @@
       </label>
 
       <label class="switch-light switch-ios" onclick="">
-        <input type="checkbox">
+        <input id="switches2" type="checkbox">
       
         <strong>
       Set Profile Public
@@ -281,8 +287,8 @@
     </select>
     
         <div class="settings-button">
-            <button class="button-primary" id="save">SAVE</button>
-            <button class="button-secondary" id="cancel">CANCEL</button>
+            <button class="button-primary" type="submit" id="save">SAVE</button>
+            <button class="button-secondary" type="reset" id="cancel">CANCEL</button>
         </div>
     
 </section>
