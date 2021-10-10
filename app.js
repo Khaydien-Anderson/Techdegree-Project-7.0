@@ -89,6 +89,8 @@ alertBanner.addEventListener('click', e => {
     const element = e.target;
     if (element.classList.contains('alert-banner-close')) {
         alertBanner.style.display = 'none';
+        const header = document.querySelector('.main-header')
+        header.style.marginTop = '20px';
     }
 
 });
@@ -342,6 +344,7 @@ save.addEventListener('click', () => {
     
 
     localStorage.setItem('timezone', timezone.value)
+    
 })
 // SAVE BUTTON FUNCTIONS ^^^
 

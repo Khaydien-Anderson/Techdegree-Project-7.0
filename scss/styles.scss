@@ -38,6 +38,10 @@ main {
     
 }
 
+button, a {
+    cursor: pointer;
+}
+
 .widget-container-full, .widget-container-half {
     width: 95vw;
 }
