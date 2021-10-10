@@ -323,6 +323,11 @@ h3 {
 .activity .activity-container .activity-text .arrow {
   display: block;
 }
+@media (max-width: 767px) {
+  .activity .activity-container .activity-text .arrow {
+    display: none;
+  }
+}
 
 .messaging {
   padding-top: 10px;

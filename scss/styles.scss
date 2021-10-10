@@ -348,6 +348,11 @@ padding-top: 10px;
         .arrow {
             display: block;
         }
+        @media (max-width: 767px) {
+        .arrow {
+            display: none;
+        }
+        }
     }
 
 }
