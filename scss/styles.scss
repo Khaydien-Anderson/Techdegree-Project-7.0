@@ -1,7 +1,7 @@
 /* VARIABLES */
-$theme-color: rgb(96,96,183);
+$theme-color: rgb(183, 153, 96);
 $nav-color:rgb(60,58,98);
-$button-color: rgb(89, 196, 118);
+$button-color: #6081b7;
 $greyout: rgb(242,242,242);
 * {
 margin: 0;
@@ -139,7 +139,8 @@ animation: notif 1s ease-in-out infinite;
         }}
 }
 nav {
-    background-color: $nav-color;
+    background-color: $theme-color;
+    
     padding: 0;
     
     

@@ -41,7 +41,7 @@ button, a {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #6060b7;
+  background-color: #b79960;
 }
 header h1 {
   padding: 9px 10px;
@@ -126,7 +126,7 @@ header .login h3 {
 }
 
 nav {
-  background-color: #3c3a62;
+  background-color: #b79960;
   padding: 0;
 }
 nav ul {
@@ -183,7 +183,7 @@ h3 {
   height: 35px;
   border-radius: 10px;
   display: inline-block;
-  background-color: #6060b7;
+  background-color: #b79960;
   width: 100%;
   white-space: nowrap;
 }
@@ -223,7 +223,7 @@ h3 {
   color: white;
   margin: auto 0;
   border: 10px solid transparent;
-  background-color: #59c476;
+  background-color: #6081b7;
   border-radius: 11px;
 }
 
@@ -252,7 +252,7 @@ h3 {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #6060b7;
+  background-color: #b79960;
 }
 .social .social-container .social-image svg {
   display: block;
@@ -268,7 +268,7 @@ h3 {
 .social .social-container p:nth-child(1) {
   padding-bottom: 5px;
   font-size: 18px;
-  color: #6060b7;
+  color: #b79960;
 }
 .social .social-container p:nth-child(2) {
   font-weight: lighter;
@@ -301,7 +301,7 @@ h3 {
 }
 .members .members-container .members-text a {
   text-decoration: none;
-  color: #6060b7;
+  color: #b79960;
 }
 
 .activity {
@@ -360,7 +360,7 @@ h3 {
   padding: 14px 0;
   font-weight: lighter;
   color: white;
-  background-color: #6060b7;
+  background-color: #b79960;
 }
 
 .settings {
@@ -402,7 +402,7 @@ h3 {
   font-family: "Roboto", sans-serif;
 }
 .settings-button #save {
-  background-color: #6060b7;
+  background-color: #b79960;
   color: white;
 }
 .settings-button #cancel {
